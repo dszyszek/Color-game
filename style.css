@@ -20,6 +20,11 @@ h2[class='txt']{
 	font-family: 'Muli', sans-serif;
 	font-size: 3.5em;
 }
+h3[class='txt']{
+	font-size: 20px;
+	font-family: 'Muli', sans-serif;
+	padding-top: 12px;
+}
 #top{
 	height: 220px;
 	background: #0f6354;
