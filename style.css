@@ -27,7 +27,7 @@ h3[class='txt']{
 }
 #top{
 	height: 220px;
-	background: #0f6354;
+	background: rgb(137, 188, 144);
 	margin: 0;
 	
 }
@@ -86,7 +86,7 @@ h3[class='txt']{
 	left: 36%;
 	width: 400px;
 	height: 200px;
-	background-color: #0f6354;
+	background-color: rgb(137, 188, 144);
 	z-index: 1000;
 	border: 5px solid #19422c;
 	border-radius: 15px;

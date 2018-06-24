@@ -16,7 +16,7 @@ let mode = 'hard';
 function colF(){
 	color = [];
 	h3.textContent = '';
-	topD.style.backgroundColor = '#0f6354';
+	topD.style.backgroundColor = 'rgb(137, 188, 144)';
 	for(let m=0;m<6;m++){
 		let cl1 = Math.floor(Math.random()*255);
 		let cl2 = Math.floor(Math.random()*255);
