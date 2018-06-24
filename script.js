@@ -2,6 +2,9 @@ let color = [];
 let sqr = document.querySelectorAll('.square');
 let newB = document.querySelector('.new');
 let h2 = document.querySelector('h2[class="txt"]');
+let hard = document.querySelector('.hard');
+let ez = document.querySelector('.ez');
+let flag = false;
 
 function colF(){
 	color = [];
@@ -22,7 +25,31 @@ function sqrC(e){
 	else(console.log('try again'));
 }
 
+function hrdF(){
+	flag = false;
+	lvlF();
+}
+function ezF(){
+	flag = true;
+	lvlF();
+}
+
+function lvlF(){
+	sqr.forEach(x => x.classList.remove('hide','show'));
+	if(flag){
+		for(let m=3;m<6;m++){
+			sqr[m].classList.add('hide');
+		}
+	}else{
+		for(let m=3;m<6;m++){
+			sqr[m].classList.add('show');
+		}
+	}
+	
+}
 
 document.addEventListener('load', colF());
 newB.addEventListener('click',colF);
 sqr.forEach(x => x.addEventListener('click',sqrC));
+hard.addEventListener('click',hrdF);
+ez.addEventListener('click',ezF);
