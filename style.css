@@ -78,5 +78,37 @@ h3[class='txt']{
 	width: 585px;
 	margin-left: auto;
 	margin-right: auto;
-
+}
+#popW{
+	display: none;
+	position: absolute;
+	top: 300px;
+	left: 350px;
+	width: 400px;
+	height: 200px;
+	background-color: #0f6354;
+	z-index: 1000;
+	border: 5px solid #19422c;
+	border-radius: 15px;
+}
+.popT{
+	text-align: left;
+	margin-left: 30px;
+	border-bottom: 2px solid black;
+	width: 340px;
+}
+.popC{
+	font-family: 'Muli', sans-serif;
+	font-size: 18px;
+	text-align: left;
+	margin-left: 30px;
+	width: 340px;
+	height: 70px;
+	padding-top: 10px;
+}
+.btnI{
+	height: 30px;
+	margin-right: 27px;
+	font-size: 15px;
+		border-radius: 5px;
 }
