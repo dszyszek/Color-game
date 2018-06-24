@@ -7,11 +7,11 @@ let hard = document.querySelector('.hard');
 let ez = document.querySelector('.ez');
 let inf = document.querySelector('.inf');
 let btnI = document.querySelector('.btnI');
+let popC = document.querySelector('.popC');
 const topD = document.querySelector('#top');
 let flag = false;
 let win = false;
 let mode = 'hard';
-
 
 function colF(){
 	color = [];
@@ -55,16 +55,20 @@ function winF(param){
 
 function hrdF(){
 	mode = 'hard';
-	if(flag == false){alert('Note: Level is already selected!')}
+	if(flag == false){lvlI()}
 	else{flag = false;
 	lvlF();}
 }
 function ezF(){
 	mode = 'easy';
-	if(flag == true){alert('Note: Level is already selected!')}
+	if(flag == true){lvlI()}
 	else{
 	flag = true;
 	lvlF();}
+}
+function lvlI(){
+	popW.style.display = 'block';
+	popC.textContent = 'Note: Level is already selected!';
 }
 
 function lvlF(){
@@ -84,11 +88,11 @@ function btnC(){
 }
 function infF(){
 	popW.style.display = 'block';
+	popC.textContent = 'The goal is to guess wchich square has the same color (in RGB format) as is written above.';
 }
 function btnIF(){
 	popW.style.display = 'none';
 }
-
 
 document.addEventListener('load', colF());
 newB.addEventListener('click',function(){let intv = window.setInterval(colF,100);
