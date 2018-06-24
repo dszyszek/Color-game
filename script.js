@@ -42,7 +42,7 @@ function quaF(){
 
 function sqrC(e){
 	if(e.target.style.backgroundColor.toUpperCase() == h2.textContent){h3.textContent = 'You win!',winF(e)}
-	else(e.target.classList.remove('show'),e.target.classList.add('hide'), h3.textContent = 'Try again',window.setTimeout(function(){h3.textContent = ''},1000));
+	else(e.target.classList.remove('show'),e.target.classList.add('hide'), h3.textContent = 'Try again',window.setTimeout(function(){h3.textContent = ''},500));
 }
 function winF(param){
 	win = true;
@@ -82,7 +82,8 @@ function btnC(){
 }
 
 document.addEventListener('load', colF());
-newB.addEventListener('click',colF);
+newB.addEventListener('click',function(){let intv = window.setInterval(colF,100);
+			window.setTimeout(function(){window.clearInterval(intv)},1000)});
 newB.addEventListener('click',quaF);
 sqr.forEach(x => x.addEventListener('click',sqrC));
 hard.addEventListener('click',hrdF);
