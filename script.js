@@ -1,4 +1,28 @@
-let color = ['#782ea5','#305cad','#2ca56d','#86a530','#a59330','#a8421f'];
+let color = [];
 let sqr = document.querySelectorAll('.square');
+let newB = document.querySelector('.new');
+let h2 = document.querySelector('h2[class="txt"]');
 
-sqr.forEach((x,m) => (x.style.backgroundColor = color[m]))
+function colF(){
+	color = [];
+	for(let m=0;m<6;m++){
+		let cl1 = Math.floor(Math.random()*255);
+		let cl2 = Math.floor(Math.random()*255);
+		let cl3 = Math.floor(Math.random()*255);
+
+		let newCol = 'rgb(' + cl1 + ', ' + cl2 + ', ' + cl3 + ')'
+		color.push(newCol);
+	}
+	sqr.forEach((x,m) => (x.style.backgroundColor = color[m]));
+	h2.textContent = color[1].toUpperCase();
+}
+
+function sqrC(e){
+	if(e.target.style.backgroundColor.toUpperCase() == h2.textContent){console.log('win')}
+	else(console.log('try again'));
+}
+
+
+document.addEventListener('load', colF());
+newB.addEventListener('click',colF);
+sqr.forEach(x => x.addEventListener('click',sqrC));
