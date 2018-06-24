@@ -3,7 +3,10 @@ body{
 	margin: 0;
 }
 .hide{
-	display: none;
+	visibility: hidden;
+}
+.show{
+	visibility: visible;
 }
 .txt{
 	margin: 0;
@@ -56,6 +59,9 @@ h2[class='txt']{
 	font-size: 17px;
 	font-family: 'Muli', sans-serif;	
 	color: #fff;
+}
+.hard{
+	background: #112d1e;
 }
 .btn:hover{
 	background: #112d1e;
