@@ -2,6 +2,9 @@ body{
     background-color: #231f1d;
 	margin: 0;
 }
+.hide{
+	display: none;
+}
 .txt{
 	margin: 0;
 	text-align: center;
@@ -35,8 +38,34 @@ h2[class='txt']{
 	float: left;
 	border-radius: 20px;
 }
+.square:hover{
+		opacity: 0.8;	
+}
+
 #menu{
 	height: 40px;
 	margin-top: 0;
-	background: white;
+	background: #19422c;
+}
+.btn{
+	height: 40px;
+	margin: 0;
+	width: 100px;
+	border: 0;
+	background: #19422c;
+	font-size: 17px;
+	font-family: 'Muli', sans-serif;	
+	color: #fff;
+}
+.btn:hover{
+	background: #112d1e;
+}
+
+.rgh{float: right;}
+
+#in{
+	width: 585px;
+	margin-left: auto;
+	margin-right: auto;
+
 }
