@@ -5,6 +5,8 @@ let h2 = document.querySelector('h2[class="txt"]');
 let h3 = document.querySelector('h3[class="txt"]');
 let hard = document.querySelector('.hard');
 let ez = document.querySelector('.ez');
+let inf = document.querySelector('.inf');
+let btnI = document.querySelector('.btnI');
 const topD = document.querySelector('#top');
 let flag = false;
 let win = false;
@@ -80,6 +82,13 @@ function btnC(){
 	hard.style.backgroundColor = '#112d1e';
 	}
 }
+function infF(){
+	popW.style.display = 'block';
+}
+function btnIF(){
+	popW.style.display = 'none';
+}
+
 
 document.addEventListener('load', colF());
 newB.addEventListener('click',function(){let intv = window.setInterval(colF,100);
@@ -88,3 +97,5 @@ newB.addEventListener('click',quaF);
 sqr.forEach(x => x.addEventListener('click',sqrC));
 hard.addEventListener('click',hrdF);
 ez.addEventListener('click',ezF);
+inf.addEventListener('click',infF);
+btnI.addEventListener('click',btnIF);
